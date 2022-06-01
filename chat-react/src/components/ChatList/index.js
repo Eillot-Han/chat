@@ -28,7 +28,7 @@ class ChatList extends Component {
     });
   }
   delete() {
-    if (this.state.group) {
+    if (this.state.group === true) {
       request
         .post(
           "/group/deleteGroup",
@@ -66,6 +66,7 @@ class ChatList extends Component {
             onClick={() => {
               localStorage.setItem("roomid", this.state.id);
               localStorage.setItem("group", this.state.group);
+              console.log(this.state.group);
             }}
             to={"/chatroom/" + this.state.id}
           >

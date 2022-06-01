@@ -24,20 +24,22 @@ class Home extends Component {
         account: val,
       });
     });
-    request
-      .get("/group/userPartGroup", {
-        account: this.state.account,
-      })
-      .then((res) => {
-        this.setState({ groupList: res.data });
-      });
-    request
-      .get("/relationship/allFriend", {
-        account: this.state.account,
-      })
-      .then((res) => {
-        this.setState({ friendList: res.data });
-      });
+    if (this.state.account) {
+      request
+        .get("/group/userPartGroup", {
+          account: this.state.account,
+        })
+        .then((res) => {
+          this.setState({ groupList: res.data });
+        });
+      request
+        .get("/relationship/allFriend", {
+          account: this.state.account,
+        })
+        .then((res) => {
+          this.setState({ friendList: res.data });
+        });
+    }
   }
   componentWillUnmount() {
     event.removeListener("eventMsg", () => console.log("closed"));

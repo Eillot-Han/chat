@@ -15,7 +15,7 @@ class ChatHis extends Component {
   }
 
   componentDidMount() {
-    if (localStorage.getItem("group") === true) {
+    if (localStorage.getItem("group") === "true") {
       request
         .get("/groupMessage/allMessage", {
           group_id: localStorage.getItem("roomid"),
@@ -36,7 +36,7 @@ class ChatHis extends Component {
 
   inquire = (event) => {
     if (event.keyCode === 13) {
-      if (localStorage.getItem("group") === true) {
+      if (localStorage.getItem("group") === "true") {
         request
           .get("/groupMessage/inquireMessage", {
             group_id: localStorage.getItem("roomid"),
@@ -77,7 +77,7 @@ class ChatHis extends Component {
             </div>
             {this.state.list.map((val) => (
               <div className="msg_box">
-                {localStorage.getItem("group") === true ? (
+                {localStorage.getItem("group") === "true" ? (
                   <p className="id">{val.user_id}:</p>
                 ) : (
                   <p className="id">{val.from_id}:</p>

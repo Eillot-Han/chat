@@ -18,7 +18,7 @@ class ChatPage extends Component {
     if (event.keyCode === 13) {
       var message = localStorage.getItem("uid") + ":" + event.target.value;
       sendMsg(message);
-      if (localStorage.getItem("group") === true) {
+      if (localStorage.getItem("group") === "true") {
         request
           .post(
             "/groupMessage/addMessage",
@@ -71,7 +71,7 @@ class ChatPage extends Component {
     const file = e.target.files[0];
     let formData = new FormData();
     formData.append("file", file);
-    if (localStorage.getItem("group") === true) {
+    if (localStorage.getItem("group") === "true") {
       console.log(formData);
       request
         .post("/groupMessage/addMessage", {
@@ -100,6 +100,7 @@ class ChatPage extends Component {
   };
 
   render() {
+    console.log(localStorage.getItem("group"));
     return (
       <div className="chat_page">
         <Header />
