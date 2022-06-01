@@ -1,0 +1,14 @@
+.ChatHistory {
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  padding: 20px;
+  width: 1000px;
+  margin-bottom: 10px;
+  height: 500px;
+}
+h2 {
+  margin: 0;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+}

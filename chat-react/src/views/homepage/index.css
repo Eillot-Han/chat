@@ -1,0 +1,16 @@
+.button-group {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-group button {
+    width: 200px;
+    margin: 0 40px;
+    height: 40px;
+    background-color: #405b8d;
+    color: white;   
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}

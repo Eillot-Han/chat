@@ -1,0 +1,19 @@
+.chat_page {
+    display: flex;
+    flex-direction: column;
+}
+
+.link_button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.link_button p {
+    margin-top: -2px;
+}

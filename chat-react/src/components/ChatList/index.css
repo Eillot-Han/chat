@@ -1,0 +1,25 @@
+.ChatList {
+    border: 2px solid black;
+    height: 100px;
+    width: 1000px;
+    border-radius: 15px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.chat_name {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.chat_button {
+    margin: 0;
+    width: 100px;
+    border-radius: 15px;
+    margin-top: 30px;
+    border: 2px solid #000;
+}

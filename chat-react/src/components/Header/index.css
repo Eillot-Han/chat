@@ -1,0 +1,21 @@
+.header {
+  background-color: #15223b;
+  width: 100%;
+  margin: 0;
+  padding: 10px 30%;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+h2 {
+  padding: 0;
+}
+.logout {
+  margin-left: 500px;
+  width: 100px;
+  height: 38px;
+  border-radius: 15px;
+  border: 2px solid #ccc;
+}
